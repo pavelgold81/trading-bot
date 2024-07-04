@@ -13,7 +13,7 @@ binance = ccxt.binance({
     'secret': api_secret,
 })
 
-def fetch_ohlcv(symbol, timeframe, limit=500):
+def fetch_ohlcv(symbol, timeframe, limit=5000):
     ohlcv = binance.fetch_ohlcv(symbol, timeframe=timeframe, limit=limit)
     return ohlcv
 
